@@ -1,14 +1,15 @@
 # /usr/bin/env python
 # Download the twilio-python library from http://twilio.com/docs/libraries
 from twilio.rest import Client
+from twilio_creds import account_sid, auth_token
 from scrape import scrape, ping, people, pLayer
 import sys
 import datetime
 
 # Find these values at https://twilio.com/user/account
-account_sid = "AC3e1252b3f55741e9dfeb3fb4ef66d88e"
-auth_token = "2e89e4f761bee93067348899cc5e6493"
-client = Client(account_sid, auth_token)
+# Find these values at https://twilio.com/user/account
+# account_sid = 'XXXXXXXXXXX" # PUT YOUR TWILIO ACCOUNT_SID IN twilio_creds.py FILE
+# auth_token = 'XXXXXXXXXXX" # PUT YOUR TWILIO_AUTH TOKEN IN twilio_creds.py FILE
 
 
 ### google drive api freaked out trying to read back microseconds from the sheet ###
